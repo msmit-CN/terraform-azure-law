@@ -82,5 +82,5 @@ MIT Licensed. See [LICENSE](https://github.com/cloudnationhq/terraform-azure-law
 
 ## Reference
 
-- [Log Analytics Woekspace Documentation - Microsoft docs](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-workspace-overview)
-- [Log Analytics Workspace Rest Api - Microsoft docs](https://learn.microsoft.com/en-us/rest/api/loganalytics/)
+- [Documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-workspace-overview)
+- [Rest Api](https://learn.microsoft.com/en-us/rest/api/loganalytics/)
