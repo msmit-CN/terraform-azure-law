@@ -80,7 +80,7 @@ Module is maintained by [these awesome contributors](https://github.com/cloudnat
 
 MIT Licensed. See [LICENSE](https://github.com/cloudnationhq/terraform-azure-law/blob/main/LICENSE) for full details.
 
-## Reference
+## References
 
 - [Documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-workspace-overview)
 - [Rest Api](https://learn.microsoft.com/en-us/rest/api/loganalytics/)
