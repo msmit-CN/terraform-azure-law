@@ -15,20 +15,12 @@ module "rg" {
   }
 }
 
-//module "analitics" {
-//  source = "../../"
-//
-//  law = {
-//    name          = module.naming.log_analytics_workspace.name
-//    location      = module.rg.groups.demo.location
-//    resourcegroup = module.rg.groups.demo.name
-//  }
-//}
-
-module "analytics" {
+module "analitics" {
   source = "../../"
 
-  for_each = local.workspaces
-
-  law = each.value
+  law = {
+    name          = module.naming.log_analytics_workspace.name
+    location      = module.rg.groups.demo.location
+    resourcegroup = module.rg.groups.demo.name
+  }
 }
