@@ -16,7 +16,8 @@ module "rg" {
 }
 
 module "law" {
-  source = "../../"
+  source  = "cloudnationhq/law/azure"
+  version = "~> 0.1"
 
   law = {
     name          = module.naming.log_analytics_workspace.name

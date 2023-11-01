@@ -4,7 +4,8 @@ This example illustrates the default log analytics workspace setup, in its simpl
 
 ```hcl
 module "analytics" {
-  source = "github.com/cloudnationhq/terraform-azure-law"
+  source  = "cloudnationhq/law/azure"
+  version = "~> 0.1"
 
   law = {
     name          = module.naming.log_analytics_workspace.name
@@ -20,7 +21,8 @@ Additionally, for certain scenarios, the example below highlights the ability to
 
 ```hcl
 module "analytics" {
-  source = "../../"
+  source  = "cloudnationhq/law/azure"
+  version = "~> 0.1"
 
   for_each = local.workspaces
 
