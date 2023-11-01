@@ -1,0 +1,3 @@
+variable "law" {
+  type = any
+}
