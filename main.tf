@@ -17,11 +17,9 @@ resource "azurerm_log_analytics_workspace" "ws" {
 
 # solutions
 resource "azurerm_log_analytics_solution" "solutions" {
-  for_each = {
-    for solution in local.solutions : solution.solution_key => solution
-  }
+  for_each = local.solutions
 
-  solution_name         = each.value.solution_name
+  solution_name         = each.key
   location              = each.value.location
   resource_group_name   = each.value.resourcegroup
   workspace_resource_id = each.value.workspace_id
