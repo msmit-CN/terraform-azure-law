@@ -1,3 +1,5 @@
+data "azurerm_subscription" "current" {}
+
 # workspaces
 resource "azurerm_log_analytics_workspace" "ws" {
   name                = var.law.name

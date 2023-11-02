@@ -58,7 +58,7 @@ As a prerequirement, please ensure that both go and terraform are properly insta
 
 The [Makefile](Makefile) includes two distinct variations of tests. The first one is designed to deploy different usage scenarios of the module. These tests are executed by specifying the TF_PATH environment variable, which determines the different usages located in the example directory.
 
-To execute this test, input the command ```make test TF_PATH=default```, substituting simple with the specific usage you wish to test.
+To execute this test, input the command ```make test TF_PATH=default```, substituting default with the specific usage you wish to test.
 
 The second variation is known as a extended test. This one performs additional checks and can be executed without specifying any parameters, using the command ```make test_extended```.
 
@@ -84,3 +84,4 @@ MIT Licensed. See [LICENSE](https://github.com/cloudnationhq/terraform-azure-law
 
 - [Documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-workspace-overview)
 - [Rest Api](https://learn.microsoft.com/en-us/rest/api/loganalytics/)
+- [Rest Api Specs](https://github.com/Azure/azure-rest-api-specs/tree/1f449b5a17448f05ce1cd914f8ed75a0b568d130/specification/operationalinsights/resource-manager)

@@ -1,3 +1,4 @@
 variable "law" {
-  type = any
+  description = "Contains all log analytics workspace settings"
+  type        = any
 }
