@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.2.0...v0.2.1) (2023-11-02)
+
+
+### Bug Fixes
+
+* use map instead of a flat list in solutions ([#7](https://github.com/CloudNationHQ/terraform-azure-law/issues/7)) ([e3df37b](https://github.com/CloudNationHQ/terraform-azure-law/commit/e3df37b4a93757b258e4acbd46391e54e0a93b19))
+
 ## [0.2.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.1.0...v0.2.0) (2023-11-02)
 
 
