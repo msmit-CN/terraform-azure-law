@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.1.0...v0.2.0) (2023-11-02)
+
+
+### Features
+
+* add extended tests ([#4](https://github.com/CloudNationHQ/terraform-azure-law/issues/4)) ([1e4aba9](https://github.com/CloudNationHQ/terraform-azure-law/commit/1e4aba995bb9120de7ae12fa69656e3408311079))
+
 ## 0.1.0 (2023-11-01)
 
 
