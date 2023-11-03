@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.2.1...v0.3.0) (2023-11-03)
+
+
+### Features
+
+* fix module source references in examples ([#9](https://github.com/CloudNationHQ/terraform-azure-law/issues/9)) ([e857f13](https://github.com/CloudNationHQ/terraform-azure-law/commit/e857f13f6e6be25022646796e916891bafda733b))
+
 ## [0.2.1](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.2.0...v0.2.1) (2023-11-02)
 
 
