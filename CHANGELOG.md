@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.4.0...v0.5.0) (2024-01-19)
+
+
+### Features
+
+* **deps:** Bump github.com/gruntwork-io/terratest from 0.46.8 to 0.46.9 in /tests ([#20](https://github.com/CloudNationHQ/terraform-azure-law/issues/20)) ([5fd6084](https://github.com/CloudNationHQ/terraform-azure-law/commit/5fd60846ae5d9f24e7b1e7a707b288e6bc345391))
+* small refactor workflows ([#21](https://github.com/CloudNationHQ/terraform-azure-law/issues/21)) ([e892dc3](https://github.com/CloudNationHQ/terraform-azure-law/commit/e892dc30447fb2efceb85ab952fb7ad48a62bb59))
+
 ## [0.4.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.3.0...v0.4.0) (2023-12-19)
 
 

@@ -5,7 +5,7 @@ This example demonstrates the use of solutions within a log analytics workspace.
 ```hcl
 module "law" {
   source  = "cloudnationhq/law/azure"
-  version = "~> 0.4"
+  version = "~> 0.5"
 
   law = {
     name          = module.naming.log_analytics_workspace.name
