@@ -16,6 +16,7 @@ A last key goal is to separate logic from configuration in the module, thereby e
 
 - offers support for multiple solutions, facilitating seamless integration of various monitoring and analytics capabilities
 - utilization of terratest for robust validation.
+- supports multiple data export rules to streamline data management
 
 ## Requirements
 
@@ -31,6 +32,12 @@ A last key goal is to separate logic from configuration in the module, thereby e
 |------|---------|
 | <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | ~> 3.61 |
 
+## Modules
+
+| Name | Source |
+|------|--------|
+| [export-rules](./modules/export-rules) | resource |
+
 ## Resources
 
 | Name | Type |
@@ -38,6 +45,7 @@ A last key goal is to separate logic from configuration in the module, thereby e
 | [azurerm_subscription](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/subscription) | data source |
 | [azurerm_log_analytics_workspace](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/log_analytics_workspace) | resource |
 | [azurerm_log_analytics_solution](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/log_analytics_solution) | resource |
+| [azurerm_log_analytics_data_export_rule](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/log_analytics_data_export_rule) | resource |
 
 ## Inputs
 

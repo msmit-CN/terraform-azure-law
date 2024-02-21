@@ -1,9 +1,9 @@
-This example demonstrates the use of solutions within a log analytics workspace. Solutions enable specific analytic capabilities to be integrated within a workspace, essentially providing them tailored insights.
+This example highlights integrating analytics solutions into a workspace.
 
 ## Usage: solutions
 
 ```hcl
-module "law" {
+module "analytics" {
   source  = "cloudnationhq/law/azure"
   version = "~> 0.5"
 
