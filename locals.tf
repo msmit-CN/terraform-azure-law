@@ -8,6 +8,7 @@ locals {
       workspace_id   = azurerm_log_analytics_workspace.ws.id
       workspace_name = azurerm_log_analytics_workspace.ws.name
       resourcegroup  = var.law.resourcegroup
+      tags           = try(solution.tags, {})
     }
   }
 }

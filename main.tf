@@ -17,6 +17,7 @@ resource "azurerm_log_analytics_workspace" "ws" {
   data_collection_rule_id                 = try(var.law.data_collection_rule_id, null)
   local_authentication_disabled           = try(var.law.local_authentication_disabled, false)
   immediate_data_purge_on_30_days_enabled = try(var.law.immediate_data_purge_on_30_days_enabled, false)
+  tags                                    = try(var.law.tags, {})
 }
 
 # solutions
@@ -28,6 +29,7 @@ resource "azurerm_log_analytics_solution" "solutions" {
   resource_group_name   = each.value.resourcegroup
   workspace_resource_id = each.value.workspace_id
   workspace_name        = each.value.workspace_name
+  tags                  = each.value.tags
 
   plan {
     publisher = each.value.publisher
