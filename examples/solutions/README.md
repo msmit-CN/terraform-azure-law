@@ -5,7 +5,7 @@ This example highlights integrating analytics solutions into a workspace.
 ```hcl
 module "analytics" {
   source  = "cloudnationhq/law/azure"
-  version = "~> 0.5"
+  version = "~> 0.6"
 
   law = {
     name          = module.naming.log_analytics_workspace.name

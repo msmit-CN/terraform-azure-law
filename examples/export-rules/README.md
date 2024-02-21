@@ -5,7 +5,7 @@ This example highlights integrating data export rules into a workspace.
 ```hcl
 module "analytics" {
   source  = "cloudnationhq/law/azure"
-  version = "~> 0.1"
+  version = "~> 0.6"
 
   law = {
     name          = module.naming.log_analytics_workspace.name
