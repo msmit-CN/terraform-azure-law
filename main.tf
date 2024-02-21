@@ -7,12 +7,16 @@ resource "azurerm_log_analytics_workspace" "ws" {
   location            = var.law.location
   sku                 = try(var.law.sku, "PerGB2018")
 
-  daily_quota_gb                     = try(var.law.daily_quota_gb, null)
-  internet_ingestion_enabled         = try(var.law.internet_ingestion_enabled, true)
-  internet_query_enabled             = try(var.law.internet_query_enabled, true)
-  retention_in_days                  = try(var.law.retention, 30)
-  reservation_capacity_in_gb_per_day = try(var.law.reservation_capacity_in_gb_per_day, null)
-  allow_resource_only_permissions    = try(var.law.allow_resource_only_permissions, true)
+  daily_quota_gb                          = try(var.law.daily_quota_gb, null)
+  internet_ingestion_enabled              = try(var.law.internet_ingestion_enabled, true)
+  internet_query_enabled                  = try(var.law.internet_query_enabled, true)
+  retention_in_days                       = try(var.law.retention, 30)
+  reservation_capacity_in_gb_per_day      = try(var.law.reservation_capacity_in_gb_per_day, null)
+  allow_resource_only_permissions         = try(var.law.allow_resource_only_permissions, true)
+  cmk_for_query_forced                    = try(var.law.cmk_for_query_forced, false)
+  data_collection_rule_id                 = try(var.law.data_collection_rule_id, null)
+  local_authentication_disabled           = try(var.law.local_authentication_disabled, false)
+  immediate_data_purge_on_30_days_enabled = try(var.law.immediate_data_purge_on_30_days_enabled, false)
 }
 
 # solutions
