@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.7.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.6.0...v0.7.0) (2024-06-07)
+
+
+### Features
+
+* create pull request template ([#40](https://github.com/CloudNationHQ/terraform-azure-law/issues/40)) ([6061280](https://github.com/CloudNationHQ/terraform-azure-law/commit/6061280e111daaa7f228c352ec6bd761de9f7e2e))
+* **deps:** bump github.com/Azure/azure-sdk-for-go/sdk/azidentity ([#35](https://github.com/CloudNationHQ/terraform-azure-law/issues/35)) ([d385e77](https://github.com/CloudNationHQ/terraform-azure-law/commit/d385e7737be71ef69dec512b70180435d9de2dfe))
+* **deps:** bump github.com/hashicorp/go-getter in /tests ([#37](https://github.com/CloudNationHQ/terraform-azure-law/issues/37)) ([6dfbc92](https://github.com/CloudNationHQ/terraform-azure-law/commit/6dfbc928c353d253a9d123eea35de0518cb4f38a))
+* **deps:** bump github.com/stretchr/testify in /tests ([#32](https://github.com/CloudNationHQ/terraform-azure-law/issues/32)) ([1974298](https://github.com/CloudNationHQ/terraform-azure-law/commit/19742982e6401207caafa88d0ede9c15237dfd11))
+* **deps:** bump google.golang.org/protobuf in /tests ([#33](https://github.com/CloudNationHQ/terraform-azure-law/issues/33)) ([0a8ff7d](https://github.com/CloudNationHQ/terraform-azure-law/commit/0a8ff7d71f7958627a021aa385895d4de7d58beb))
+
 ## [0.6.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.5.0...v0.6.0) (2024-02-21)
 
 
