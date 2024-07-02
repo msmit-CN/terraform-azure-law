@@ -5,7 +5,7 @@ This example illustrates the default log analytics workspace setup, in its simpl
 ```hcl
 module "analytics" {
   source  = "cloudnationhq/law/azure"
-  version = "~> 0.7"
+  version = "~> 0.8"
 
   law = {
     name          = module.naming.log_analytics_workspace.name

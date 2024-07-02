@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.8.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.7.0...v0.8.0) (2024-07-02)
+
+
+### Features
+
+* add issue template ([#47](https://github.com/CloudNationHQ/terraform-azure-law/issues/47)) ([6890fc8](https://github.com/CloudNationHQ/terraform-azure-law/commit/6890fc8923a1ea06380a79e3fc99e6c4acad1437))
+* **deps:** bump github.com/Azure/azure-sdk-for-go/sdk/azidentity ([#42](https://github.com/CloudNationHQ/terraform-azure-law/issues/42)) ([97b0803](https://github.com/CloudNationHQ/terraform-azure-law/commit/97b0803cc230dc322265f41bad6f072428a16d6d))
+* **deps:** bump github.com/Azure/azure-sdk-for-go/sdk/azidentity ([#44](https://github.com/CloudNationHQ/terraform-azure-law/issues/44)) ([f5e25ad](https://github.com/CloudNationHQ/terraform-azure-law/commit/f5e25ad9394e6c136141d554f480e5ee18977742))
+* **deps:** bump github.com/gruntwork-io/terratest in /tests ([#39](https://github.com/CloudNationHQ/terraform-azure-law/issues/39)) ([4bb0f60](https://github.com/CloudNationHQ/terraform-azure-law/commit/4bb0f600d1811f12afd86c7ac8bac0a53a2d5a0b))
+* **deps:** bump github.com/gruntwork-io/terratest in /tests ([#46](https://github.com/CloudNationHQ/terraform-azure-law/issues/46)) ([3f9f4d9](https://github.com/CloudNationHQ/terraform-azure-law/commit/3f9f4d93063848ecb5173c08b04dbf6b17e22867))
+* **deps:** bump github.com/hashicorp/go-getter in /tests ([#45](https://github.com/CloudNationHQ/terraform-azure-law/issues/45)) ([fcbc78b](https://github.com/CloudNationHQ/terraform-azure-law/commit/fcbc78b72fef712549d347db26e1a9d24571114e))
+* **deps:** bump golang.org/x/net from 0.19.0 to 0.23.0 in /tests ([#36](https://github.com/CloudNationHQ/terraform-azure-law/issues/36)) ([47a968b](https://github.com/CloudNationHQ/terraform-azure-law/commit/47a968b08b28f09301bff0d90527a5acb3cad54c))
+
 ## [0.7.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.6.0...v0.7.0) (2024-06-07)
 
 
