@@ -17,12 +17,23 @@ module "rg" {
   }
 }
 
+module "storage" {
+  source  = "cloudnationhq/sa/azure"
+  version = "~> 0.1"
+
+  storage = {
+    name          = module.naming.storage_account.name_unique
+    location      = module.rg.groups.demo.location
+    resourcegroup = module.rg.groups.demo.name
+  }
+}
+
 module "analytics" {
   source  = "cloudnationhq/law/azure"
   version = "~> 0.1"
 
   law = {
-    name          = module.naming.log_analytics_workspace.name
+    name          = module.naming.log_analytics_workspace.name_unique
     location      = module.rg.groups.demo.location
     resourcegroup = module.rg.groups.demo.name
 
