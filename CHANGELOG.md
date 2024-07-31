@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.9.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.8.0...v0.9.0) (2024-07-31)
+
+
+### Features
+
+* add type definitions in all usage documentation ([#52](https://github.com/CloudNationHQ/terraform-azure-law/issues/52)) ([416bcb9](https://github.com/CloudNationHQ/terraform-azure-law/commit/416bcb981a4e40c981486bc311071197dc85e9f5))
+* **deps:** bump github.com/gruntwork-io/terratest in /tests ([#50](https://github.com/CloudNationHQ/terraform-azure-law/issues/50)) ([7d5e52d](https://github.com/CloudNationHQ/terraform-azure-law/commit/7d5e52da6164d1d30a00051daa3de57e11aac9a9))
+* update contribution docs ([80c0bb6](https://github.com/CloudNationHQ/terraform-azure-law/commit/80c0bb6bafaee0faf892c539218cedc9365ba2f2))
+
+
+### Bug Fixes
+
+* remove redundant provider blocks in all usages ([#53](https://github.com/CloudNationHQ/terraform-azure-law/issues/53)) ([0b6cac3](https://github.com/CloudNationHQ/terraform-azure-law/commit/0b6cac3aba700a03247c386db0a2cf5b41dbf231))
+
 ## [0.8.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.7.0...v0.8.0) (2024-07-02)
 
 
