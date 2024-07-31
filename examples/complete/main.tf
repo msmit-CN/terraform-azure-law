@@ -26,6 +26,14 @@ module "analytics" {
     location      = module.rg.groups.demo.location
     resourcegroup = module.rg.groups.demo.name
 
+
+    export_rules = {
+      demo = {
+        table_names             = ["Perf"]
+        destination_resource_id = module.storage.account.id
+      }
+    }
+
     solutions = [
       "ContainerInsights",
       "VMInsights",

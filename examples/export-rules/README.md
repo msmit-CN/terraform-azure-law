@@ -1,23 +1,21 @@
-This example highlights integrating data export rules into a workspace.
+# Export Rules
 
-## Usage: export rules
+This deploys data export rules within a log analytic workspace.
+
+## Types
 
 ```hcl
-module "analytics" {
-  source  = "cloudnationhq/law/azure"
-  version = "~> 0.8"
-
-  law = {
-    name          = module.naming.log_analytics_workspace.name
-    location      = module.rg.groups.demo.location
-    resourcegroup = module.rg.groups.demo.name
-
-    export_rules = {
-      demo = {
-        table_names             = ["Perf"]
-        destination_resource_id = module.storage.account.id
-      }
-    }
-  }
-}
+law = object({
+  name          = string
+  location      = string
+  resourcegroup = string
+  export_rules  = optional(map(object({
+    table_names             = list(string)
+    destination_resource_id = string
+  })))
+})
 ```
+
+## Notes
+
+Export rules can also be used as a submodule if there is an existing Log Analytics workspace.

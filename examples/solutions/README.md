@@ -1,22 +1,14 @@
-This example highlights integrating analytics solutions into a workspace.
+# Solutions
 
-## Usage: solutions
+This deploys solutions within a log analytic workspace
+
+## Types
 
 ```hcl
-module "analytics" {
-  source  = "cloudnationhq/law/azure"
-  version = "~> 0.8"
-
-  law = {
-    name          = module.naming.log_analytics_workspace.name
-    location      = module.rg.groups.demo.location
-    resourcegroup = module.rg.groups.demo.name
-
-    solutions = [
-      "ContainerInsights",
-      "VMInsights",
-      "AzureActivity"
-    ]
-  }
-}
+law = object({
+  name          = string
+  location      = string
+  resourcegroup = string
+  solutions     = optional(list(string))
+})
 ```
