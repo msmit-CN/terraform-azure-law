@@ -37,6 +37,9 @@ module "analytics" {
     location      = module.rg.groups.demo.location
     resourcegroup = module.rg.groups.demo.name
 
+    identity = {
+      type = "UserAssigned"
+    }
 
     export_rules = {
       demo = {
@@ -52,3 +55,4 @@ module "analytics" {
     ]
   }
 }
+

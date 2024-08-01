@@ -18,6 +18,19 @@ resource "azurerm_log_analytics_workspace" "ws" {
   local_authentication_disabled           = try(var.law.local_authentication_disabled, false)
   immediate_data_purge_on_30_days_enabled = try(var.law.immediate_data_purge_on_30_days_enabled, false)
   tags                                    = try(var.law.tags, {})
+
+  dynamic "identity" {
+    for_each = lookup(var.law, "identity", null) != null ? [lookup(var.law, "identity", {})] : []
+
+    content {
+      type = lookup(identity.value, "type", "SystemAssigned")
+      identity_ids = lookup(identity.value, "type", "SystemAssigned") == "UserAssigned" ? (
+        lookup(identity.value, "identity_ids", null) != null ?
+        identity.value.identity_ids :
+        [for uai in azurerm_user_assigned_identity.identity : uai.id]
+      ) : null
+    }
+  }
 }
 
 # solutions
@@ -47,4 +60,16 @@ resource "azurerm_log_analytics_data_export_rule" "rule" {
   destination_resource_id = each.value.destination_resource_id
   table_names             = each.value.table_names
   enabled                 = try(each.value.enabled, true)
+}
+
+resource "azurerm_user_assigned_identity" "identity" {
+  for_each = lookup(var.law, "identity", null) != null ? (
+
+    lookup(var.law.identity, "type", null) == "UserAssigned" &&
+    lookup(var.law.identity, "identity_ids", null) == null ? { "identity" = var.law.identity } : {}
+  ) : {}
+
+  name                = lookup(each.value, "name", "uai-${var.law.name}")
+  location            = coalesce(lookup(each.value, "location", null), var.law.location)
+  resource_group_name = coalesce(lookup(each.value, "resourcegroup", null), var.law.resourcegroup)
 }
