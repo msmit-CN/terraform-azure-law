@@ -3,8 +3,8 @@ data "azurerm_subscription" "current" {}
 # workspaces
 resource "azurerm_log_analytics_workspace" "ws" {
   name                = var.law.name
-  resource_group_name = var.law.resourcegroup
-  location            = var.law.location
+  resource_group_name = coalesce(lookup(var.law, "resourcegroup", null), var.resourcegroup)
+  location            = coalesce(lookup(var.law, "location", null), var.location)
   sku                 = try(var.law.sku, "PerGB2018")
 
   daily_quota_gb                          = try(var.law.daily_quota_gb, null)
@@ -62,6 +62,7 @@ resource "azurerm_log_analytics_data_export_rule" "rule" {
   enabled                 = try(each.value.enabled, true)
 }
 
+# user assigned identity
 resource "azurerm_user_assigned_identity" "identity" {
   for_each = lookup(var.law, "identity", null) != null ? (
 
@@ -72,4 +73,13 @@ resource "azurerm_user_assigned_identity" "identity" {
   name                = lookup(each.value, "name", "uai-${var.law.name}")
   location            = coalesce(lookup(each.value, "location", null), var.law.location)
   resource_group_name = coalesce(lookup(each.value, "resourcegroup", null), var.law.resourcegroup)
+  tags                = try(var.law.tags, var.tags, null)
+}
+
+# linked service, only applicable for automation account
+resource "azurerm_log_analytics_linked_service" "linked" {
+  resource_group_name = try(var.law.resourcegroup, var.resourcegroup)
+  workspace_id        = azurerm_log_analytics_workspace.ws.id
+  read_access_id      = try(var.law.read_access_id, null)
+  write_access_id     = try(var.law.write_access_id, null)
 }

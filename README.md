@@ -28,6 +28,7 @@ End-to-end testing is not conducted on these modules, as they are individual com
 - Utilization of terratest for robust validation.
 - Supports multiple data export rules to streamline data management.
 - Ability to generate a user assigned identity or bring your own if specified.
+- Enables linking with an automation account.
 
 ## Requirements
 
@@ -58,13 +59,16 @@ End-to-end testing is not conducted on these modules, as they are individual com
 | [azurerm_log_analytics_solution](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/log_analytics_solution) | resource |
 | [azurerm_log_analytics_data_export_rule](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/log_analytics_data_export_rule) | resource |
 | [azurerm_user_assigned_identity](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/user_assigned_identity) | resource |
+| [azurerm_log_analytics_linked_service](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/log_analytics_linked_service) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Required |
 | :-- | :-- | :-- | :-- |
 | `law` | describes log analytics related configuration | object | yes |
-| `naming` | contains naming convention | string | yes |
+| `location` | default azure region to be used | string | no |
+| `resourcegroup` | default resource group to be used | string | no |
+| `tags` | tags to be added to the resources | map(string) | no |
 
 ## Outputs
 
