@@ -29,6 +29,7 @@ End-to-end testing is not conducted on these modules, as they are individual com
 - Supports multiple data export rules to streamline data management.
 - Ability to generate a user assigned identity or bring your own if specified.
 - Enables linking with an automation account.
+- Supports linking multiple storage accounts with different data source types.
 
 ## Requirements
 
@@ -60,6 +61,7 @@ End-to-end testing is not conducted on these modules, as they are individual com
 | [azurerm_log_analytics_data_export_rule](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/log_analytics_data_export_rule) | resource |
 | [azurerm_user_assigned_identity](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/user_assigned_identity) | resource |
 | [azurerm_log_analytics_linked_service](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/log_analytics_linked_service) | resource |
+| [azurerm_log_analytics_linked_storage_account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/log_analytics_linked_storage_account) | resource |
 
 ## Inputs
 
