@@ -76,10 +76,11 @@ resource "azurerm_user_assigned_identity" "identity" {
   tags                = try(var.law.tags, var.tags, null)
 }
 
-# linked service, only applicable for automation account
 resource "azurerm_log_analytics_linked_service" "linked" {
-  resource_group_name = try(var.law.resourcegroup, var.resourcegroup)
+  for_each = contains(keys(var.law), "linked_service") ? { "linked" = "service" } : {}
+
+  resource_group_name = var.law.resourcegroup
   workspace_id        = azurerm_log_analytics_workspace.ws.id
-  read_access_id      = try(var.law.read_access_id, null)
-  write_access_id     = try(var.law.write_access_id, null)
+  read_access_id      = lookup(var.law.linked_service, "read_access_id", null)
+  write_access_id     = lookup(var.law.linked_service, "write_access_id", null)
 }

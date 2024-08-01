@@ -33,9 +33,12 @@ module "analytics" {
   version = "~> 0.1"
 
   law = {
-    name           = module.naming.log_analytics_workspace.name_unique
-    location       = module.rg.groups.demo.location
-    resourcegroup  = module.rg.groups.demo.name
-    read_access_id = module.automation.account.id
+    name          = module.naming.log_analytics_workspace.name_unique
+    location      = module.rg.groups.demo.location
+    resourcegroup = module.rg.groups.demo.name
+
+    linked_service = {
+      read_access_id = module.automation.account.id
+    }
   }
 }
