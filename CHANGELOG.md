@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.11.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.10.0...v0.11.0) (2024-08-01)
+
+
+### Features
+
+* add support for linking storage with different data source types ([#60](https://github.com/CloudNationHQ/terraform-azure-law/issues/60)) ([ac8d380](https://github.com/CloudNationHQ/terraform-azure-law/commit/ac8d3801d513061c2c47c25b355aa4b03d95cb22))
+
 ## [0.10.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.9.0...v0.10.0) (2024-08-01)
 
 
