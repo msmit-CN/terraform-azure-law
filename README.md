@@ -76,7 +76,9 @@ End-to-end testing is not conducted on these modules, as they are individual com
 
 | Name | Description |
 | :-- | :-- |
-| `law` | contains all log analytics workspaces |
+| `workspace` | contains all log analytics workspaces settings |
+| `subscriptionId` | contains the current subscription id |
+| `solutions` | contains log analytics solutions |
 
 ## Testing
 
@@ -106,7 +108,7 @@ Module is maintained by [these awesome contributors](https://github.com/cloudnat
 
 We welcome contributions from the community! Whether it's reporting a bug, suggesting a new feature, or submitting a pull request, your input is highly valued.
 
-For more information, please see our contribution [guidelines](https://github.com/CloudNationHQ/terraform-azure-law/blob/main/CONTRIBUTE.md).
+For more information, please see our contribution [guidelines](https://github.com/CloudNationHQ/terraform-azure-law/blob/main/CONTRIBUTING.md).
 
 ## License
 

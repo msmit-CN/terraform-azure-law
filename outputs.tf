@@ -1,13 +1,14 @@
 output "workspace" {
-  description = "Contains all log analytics workspace settings"
+  description = "contains all log analytics workspace settings"
   value       = azurerm_log_analytics_workspace.ws
 }
 
 output "subscriptionId" {
-  description = "Contains the current subscription id"
+  description = "contains the current subscription id"
   value       = data.azurerm_subscription.current.subscription_id
 }
 
 output "solutions" {
-  value = azurerm_log_analytics_solution.solutions
+  description = "contains log analytics solutions"
+  value       = azurerm_log_analytics_solution.solutions
 }
