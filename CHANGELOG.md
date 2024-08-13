@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.11.0...v0.12.0) (2024-08-13)
+
+
+### Features
+
+* added code of conduct and security documentation ([#62](https://github.com/CloudNationHQ/terraform-azure-law/issues/62)) ([75ed902](https://github.com/CloudNationHQ/terraform-azure-law/commit/75ed902d5a4b17f5c5311699cfd9d8faa1a33308))
+
 ## [0.11.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.10.0...v0.11.0) (2024-08-01)
 
 
