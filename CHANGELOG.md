@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.12.0...v1.0.0) (2024-08-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* * data structure has changed due to renaming of properties and output variables.
+
+### Features
+
+* aligned several properties ([#65](https://github.com/CloudNationHQ/terraform-azure-law/issues/65)) ([8e86489](https://github.com/CloudNationHQ/terraform-azure-law/commit/8e864898915358c812d1d44d7a477c9d9232dc7e))
+
 ## [0.12.0](https://github.com/CloudNationHQ/terraform-azure-law/compare/v0.11.0...v0.12.0) (2024-08-13)
 
 
