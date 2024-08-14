@@ -5,10 +5,10 @@ This deploys a automation account linked to the log analytics workspace.
 ## Types
 
 ```hcl
-law = object({
+workspace = object({
   name            = string
   location        = string
-  resourcegroup   = string
+  resource_group  = string
   read_access_id  = optional(string)
   write_access_id = optional(string)
   linked_service  = optional(object({

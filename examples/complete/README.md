@@ -5,10 +5,10 @@ This example highlights the complete usage.
 ## Types
 
 ```hcl
-law = object({
-  name          = string
-  location      = string
-  resourcegroup = string
+workspace = object({
+  name           = string
+  location       = string
+  resource_group = string
   identity = optional(object({
     type         = string
     identity_ids = optional(list(string))

@@ -26,4 +26,4 @@ This submodule illustrates how to manage data export rules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_export_rules"></a> [export\_rules](#input\_export\_rules) | contains all log analytics data export rules | `any` | n/a | yes |
-| <a name="input_resourcegroup"></a> [resourcegroup](#input\_resourcegroup) | contains the resourcegroup name | `string` | `null` | no |
+| <a name="input_resource_group"></a> [resource_group](#input\_resource_group) | contains the resourcegroup name | `string` | `null` | no |

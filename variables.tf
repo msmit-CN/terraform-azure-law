@@ -1,4 +1,4 @@
-variable "law" {
+variable "workspace" {
   description = "Contains all log analytics workspace settings"
   type        = any
 }
@@ -9,7 +9,7 @@ variable "location" {
   default     = null
 }
 
-variable "resourcegroup" {
+variable "resource_group" {
   description = "default resource group to be used."
   type        = string
   default     = null

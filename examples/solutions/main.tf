@@ -2,7 +2,7 @@ module "naming" {
   source  = "cloudnationhq/naming/azure"
   version = "~> 0.1"
 
-  suffix = ["demo", "dev"]
+  suffix = ["law", "solutions"]
 }
 
 module "rg" {
@@ -19,12 +19,12 @@ module "rg" {
 
 module "analytics" {
   source  = "cloudnationhq/law/azure"
-  version = "~> 0.1"
+  version = "~> 1.0"
 
-  law = {
-    name          = module.naming.log_analytics_workspace.name_unique
-    location      = module.rg.groups.demo.location
-    resourcegroup = module.rg.groups.demo.name
+  workspace = {
+    name           = module.naming.log_analytics_workspace.name_unique
+    location       = module.rg.groups.demo.location
+    resource_group = module.rg.groups.demo.name
 
     solutions = [
       "ContainerInsights",

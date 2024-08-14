@@ -5,10 +5,10 @@ This deploys data export rules within a log analytic workspace.
 ## Types
 
 ```hcl
-law = object({
-  name          = string
-  location      = string
-  resourcegroup = string
+workspace = object({
+  name           = string
+  location       = string
+  resource_group = string
   export_rules  = optional(map(object({
     table_names             = list(string)
     destination_resource_id = string

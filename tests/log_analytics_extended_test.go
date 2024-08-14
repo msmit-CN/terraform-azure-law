@@ -49,7 +49,7 @@ func TestWorkspace(t *testing.T) {
 		terraform.InitAndApply(t, tfOpts)
 
 		workspaceMap := terraform.OutputMap(t, tfOpts, "workspace")
-		subscriptionID := terraform.Output(t, tfOpts, "subscriptionId")
+		subscriptionID := terraform.Output(t, tfOpts, "subscription_id")
 
 		workspaceDetails := &LogAnalyticsDetails{
 			ResourceGroupName: workspaceMap["resource_group_name"],

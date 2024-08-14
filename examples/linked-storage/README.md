@@ -5,10 +5,10 @@ This deploys storage linked to the log analytics workspace.
 ## Types
 
 ```hcl
-law = object({
-  name            = string
-  location        = string
-  resourcegroup   = string
+workspace = object({
+  name             = string
+  location         = string
+  resource_group   = string
   read_access_id  = optional(string)
   write_access_id = optional(string)
   linked_storage  = optional(map(object({

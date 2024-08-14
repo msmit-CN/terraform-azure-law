@@ -1,14 +1,14 @@
 locals {
   solutions = {
-    for solution_key, solution in try(var.law.solutions, {}) : solution => {
+    for solution_key, solution in try(var.workspace.solutions, {}) : solution => {
       solution_name  = solution
       publisher      = "Microsoft"
       product        = "OMSGallery/${solution}"
-      location       = var.law.location
+      location       = try(solution.location, var.workspace.location)
       workspace_id   = azurerm_log_analytics_workspace.ws.id
       workspace_name = azurerm_log_analytics_workspace.ws.name
-      resourcegroup  = var.law.resourcegroup
-      tags           = try(solution.tags, {})
+      resource_group = try(solution.resource_group, var.workspace.resource_group)
+      tags           = try(solution.tags, var.tags, null)
     }
   }
 }

@@ -3,7 +3,7 @@ output "workspace" {
   sensitive = true
 }
 
-output "subscriptionId" {
-  value = module.analytics.subscriptionId
+output "subscription_id" {
+  value = module.analytics.subscription_id
 }
 
