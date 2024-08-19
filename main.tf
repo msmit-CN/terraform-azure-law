@@ -50,6 +50,18 @@ resource "azurerm_log_analytics_solution" "solutions" {
   }
 }
 
+# tables
+resource "azurerm_log_analytics_workspace_table" "tables" {
+  for_each = local.tables
+
+  workspace_id = azurerm_log_analytics_workspace.ws.id
+  name         = each.key
+  plan         = each.value.plan
+
+  retention_in_days       = each.value.plan == "Basic" ? null : each.value.retention_in_days
+  total_retention_in_days = each.value.total_retention_in_days
+}
+
 # data export rules
 resource "azurerm_log_analytics_data_export_rule" "rule" {
   for_each = length(lookup(var.workspace, "export_rules", {})) > 0 ? lookup(var.workspace, "export_rules", {}) : {}

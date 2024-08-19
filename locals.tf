@@ -11,4 +11,11 @@ locals {
       tags           = try(solution.tags, var.tags, null)
     }
   }
+  tables = {
+    for table_key, table in try(var.workspace.tables, {}) : table_key => {
+      plan                    = try(table.plan, "Analytics")
+      retention_in_days       = table.plan == "Basic" ? null : try(table.retention_in_days, 30)
+      total_retention_in_days = try(table.total_retention_in_days, 30)
+    }
+  }
 }
